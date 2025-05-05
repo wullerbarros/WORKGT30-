@@ -10,11 +10,11 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
 </head>
 <body>
-    <header>
-        <div class="flex justify-between items-center bg-[#F5F5F5] h-[80px] px-10">
+    <header class="bg-white">
+        <div class="flex justify-between items-center h-[80px] px-10">
             <img src="./img-header/logo.svg" alt="Logo Geração Tech">
             <div class="relative flex items-center">
-                <input type="text" class="bg-white w-[559px] h-[60px] pr-10 pl-3 rounded-md" placeholder="Pesquisar produto...">
+                <input type="text" class="bg-gray-100 w-[559px] h-[60px] pr-10 pl-3 rounded-md" placeholder="Pesquisar produto...">
                 <button class="absolute inset-y-0 right-0 flex items-center pr-3 focus:outline-none">
                     <i class="fa-solid fa-magnifying-glass text-gray-500 cursor-pointer"></i>
                 </button>
@@ -27,7 +27,7 @@
                 <img src="./img-header/Group 53581.svg" alt="Carrinho de compras" class="w-[30px] h-[30px] cursor-pointer">
             </div>
         </div>
-        <nav class="bg-[#F5F5F5] h-[50px] items-left flex">
+        <nav class="h-[50px] items-left flex">
             <ul class="flex gap-10 text-[#4F4F4F] text-[16px] font-medium items-center justify-center h-full mx-[40px]">
                 <li class="hover:underline hover:text-[#C92071] cursor-pointer">Home</li>
                 <li class="hover:underline hover:text-[#C92071] cursor-pointer">Produtos</li>
@@ -37,28 +37,38 @@
         </nav>
     </header>
     <main>
-        <section class="bg-gray-100 p-8">
+        <section class="bg-gray-100 flex flex-col items-center justify-center py-0">
             <div x-data="{ activeSlide: 0, slides: [
-                { image: './img-header/White-Sneakers-PNG-Clipart 1.svg', title: 'Queima de estoque Nike 🔥', subtitle: 'Melhores ofertas personalizadas', description: 'Consequat culpa exercitation mollit nisi excepteur do do tempor laboris eiusmod irure consectetur.', buttonText: 'Ver Ofertas', buttonLink: '#', topImage: './img-header/Ornament 11.svg' },
-                { image: './img-header/White-Sneakers-PNG-Clipart 1.svg', title: 'Queima de estoque Nike 🔥', subtitle: 'Melhores ofertas personalizadas', description: 'Consequat culpa exercitation mollit nisi excepteur do do tempor laboris eiusmod irure consectetur.', buttonText: 'Ver Ofertas', buttonLink: '#', topImage: './img-header/Ornament 11.svg' },
-                { image: './img-header/White-Sneakers-PNG-Clipart 1.svg', title: 'Queima de estoque Nike 🔥', subtitle: 'Melhores ofertas personalizadas', description: 'Consequat culpa exercitation mollit nisi excepteur do do tempor laboris eiusmod irure consectetur.', buttonText: 'Ver Ofertas', buttonLink: '#', topImage: './img-header/Ornament 11.svg' }
+                { image: './img-header/White-Sneakers-PNG-Clipart 1.svg', title: 'Queima de estoque Nike', subtitle: 'Melhores ofertas personalizadas', description: 'Consequat culpa exercitation mollit nisi excepteur do do tempor laboris eiusmod irure consectetur.', buttonText: 'Ver Ofertas', buttonLink: '#', topImage: './img-header/Ornament 11.svg', fireImage: './img-header/foguinho.png' },
+                { image: './img-header/White-Sneakers-PNG-Clipart 1.svg', title: 'Queima de estoque Nike', subtitle: 'Melhores ofertas personalizadas', description: 'Consequat culpa exercitation mollit nisi excepteur do do tempor laboris eiusmod irure consectetur.', buttonText: 'Ver Ofertas', buttonLink: '#', topImage: './img-header/Ornament 11.svg', fireImage: './img-header/foguinho.png' },
+                { image: './img-header/White-Sneakers-PNG-Clipart 1.svg', title: 'Queima de estoque Nike', subtitle: 'Melhores ofertas personalizadas', description: 'Consequat culpa exercitation mollit nisi excepteur do do tempor laboris eiusmod irure consectetur.', buttonText: 'Ver Ofertas', buttonLink: '#', topImage: './img-header/Ornament 11.svg', fireImage: './img-header/foguinho.png' }
             ], timer: null }"
                  x-init="timer = setInterval(() => activeSlide = (activeSlide + 1) % slides.length, 3000)"
-                 class="max-w-6xl mx-auto relative group rounded-lg overflow-hidden shadow-xl">
+                 class="w-full relative group rounded-lg overflow-hidden shadow-xl">
 
                 <div class="relative flex transition-transform duration-500 ease-in-out"
                      :style="`transform: translateX(-${activeSlide * 100}%)`">
                     <template x-for="(slide, index) in slides" :key="index">
                         <div class="min-w-full flex bg-gray-100 relative">
-                            <div class="w-1/2 p-10 flex flex-col justify-center">
-                                <p x-text="slide.subtitle" class="text-sm text-gray-500 uppercase tracking-widest mb-2"></p>
-                                <h2 x-text="slide.title" class="text-3xl font-bold text-gray-800 mb-4"></h2>
+                            <div class="w-1/2 flex flex-col justify-center pt-10 pl-20 pr-50">
+                                <p x-text="slide.subtitle" class="text-sm text-[#F6AA1C] font-bold uppercase tracking-widest mb-2"></p>
+                                <h2 class="text-3xl font-bold text-[54px] text-gray-800 mb-0 flex items-center">
+                                    <span>
+                                        Queima de estoque Nike<img :src="slide.fireImage" alt="imagem de um foguinho" class="w-12 ml-2 mb-3 inline-block">
+                                    </span>
+                                </h2>
                                 <p x-text="slide.description" class="text-gray-700 mb-6"></p>
-                                <a :href="slide.buttonLink" class="bg-[#C92071] text-white py-3 px-6 rounded-md inline-block hover:bg-pink-500" x-text="slide.buttonText"></a>
+                                <a :href="slide.buttonLink" 
+                                   class="bg-[#C92071] text-white h-[48px] w-[220px] rounded-[8px] inline-flex items-center justify-center hover:bg-pink-500" 
+                                   x-text="slide.buttonText">
+                                </a>
                             </div>
                             <div class="w-1/2 flex items-center justify-center relative">
-                                <img :src="slide.image" alt="Imagem do Slide" class="object-contain max-h-[400px] max-w-full">
-                                <img :src="slide.topImage" alt="Logo Superior" class="absolute top-4 right-4 w-16 h-16 object-contain">
+                                <!-- Imagem principal -->
+                                <img :src="slide.image" alt="Imagem do Slide" class="object-contain w-full h-full px-5 mr-20 mt-20 right-0 top-100 bottom-0">
+
+                                <!-- Imagem superior separada -->
+                                <img :src="slide.topImage" alt="Logo Superior" class="absolute top-0 left-130 p-4 mr-60 mt-10 w-[140px] h-[140px] object-contain">
                             </div>
                         </div>
                     </template>
