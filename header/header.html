@@ -40,6 +40,7 @@
         </nav>
     </header>
     <main>
+        <!-- Seção de Carrossel -->
         <section class="bg-gray-100 flex flex-col items-center justify-center font-[inter]">
             <div x-data="{ activeSlide: 0, slides: [
                 { image: './img-header/White-Sneakers-PNG-Clipart 1.svg', title: 'Queima de estoque Nike', subtitle: 'Melhores ofertas personalizadas', description: 'Consequat culpa exercitation mollit nisi excepteur do do tempor laboris eiusmod irure consectetur.', buttonText: 'Ver Ofertas', buttonLink: '#', topImage: './img-header/Ornament 11.svg', fireImage: './img-header/foguinho.png' },
@@ -53,8 +54,8 @@
                      :style="`transform: translateX(-${activeSlide * 100}%)`">
                     <template x-for="(slide, index) in slides" :key="index">
                         <div class="min-w-full flex bg-gray-100 relative">
-                            <div class="w-1/2 flex flex-col justify-center pt-10 pl-20 pr-50">
-                                <p x-text="slide.subtitle" class="text-sm text-[#F6AA1C] font-bold uppercase tracking-widest mb-2"></p>
+                            <div class="w-1/2 flex flex-col justify-center pt-10 pl-20 pr-45">
+                                <p x-text="slide.subtitle" class="text-sm text-[#F6AA1C] font-bold tracking-widest mb-2"></p>
                                 <h2 class="text-3xl font-bold text-[54px] text-gray-800 mb-0 flex items-center">
                                     <span>
                                         Queima de estoque Nike<img :src="slide.fireImage" alt="imagem de um foguinho" class="w-12 ml-2 mb-3 inline-block">
@@ -77,6 +78,7 @@
                     </template>
                 </div>
 
+                <!-- Botões de navegação -->
                 <button @click="activeSlide = (activeSlide - 1 + slides.length) % slides.length; clearInterval(timer)"
                         class="absolute top-1/2 left-4 -translate-y-1/2 bg-white/30 hover:bg-white/50 rounded-full p-2.5 transition-colors">
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
@@ -109,40 +111,11 @@
                         Coleções em destaque
                     </h3>
                 </div>
-                <div class="flex gap-2 justify-center items-center mx-auto my-10">
-                    <div class="bg-[#D8E3F2] w-[405px] h-[251px] rounded-[8px] flex items-center justify-center relative">
-                        <p class="bg-[#E7FF86] px-6 text-center rounded-[20px] text-[14px] absolute transform -translate-y-[60px] translate-x-[-120px]">
-                            30% OFF
-                        </p>
-                        <h4 class="font-bold text-[32px] w-[172px] h-[72px] text-[#1F1F1F] absolute transform translate-x-[-80px] -translate-y-[5px]">
-                            Novo drop supreme
-                        </h4>
-                        <img src="./img-colecaoDestaque/star-wars-storm-trooper-supreme-shirts-supreme-t-shirt-snoopy-clothing-apparel-t-shirt-text-transparent-png-616696 1.svg" alt="camiseta preta" class="w-[200px] h-[200px] transform translate-x-[100px] translate-y-[25px] absolute">
-                        <button class="bg-white px-16 py-2 rounded-[8px] absolute transform -translate-x-[75px] translate-y-[95px] font-bold text-[#C92071]">Comprar</button>
+                <div id="destaque-cards-container" class="flex gap-2 justify-center items-center mx-auto my-10 text-[inter]">
                     </div>
-                    <div class="bg-[#D8E3F2] w-[405px] h-[251px] rounded-[8px] flex items-center justify-center relative">
-                        <p class="bg-[#E7FF86] px-6 text-center rounded-[20px] text-[14px] absolute transform -translate-y-[60px] translate-x-[-120px]">
-                            30% OFF
-                        </p>
-                        <h4 class="font-bold text-[32px] w-[172px] h-[72px] text-[#1F1F1F] absolute transform translate-x-[-80px] -translate-y-[5px]">
-                            Novo drop supreme
-                        </h4>
-                        <img src="./img-colecaoDestaque/star-wars-storm-trooper-supreme-shirts-supreme-t-shirt-snoopy-clothing-apparel-t-shirt-text-transparent-png-616696 1.svg" alt="camiseta preta" class="w-[200px] h-[200px] transform translate-x-[100px] translate-y-[25px] absolute">
-                        <button class="bg-white px-16 py-2 rounded-[8px] absolute transform -translate-x-[75px] translate-y-[95px] font-bold text-[#C92071]">Comprar</button>
-                    </div>
-                    <div class="bg-[#D8E3F2] w-[405px] h-[251px] rounded-[8px] flex items-center justify-center relative">
-                        <p class="bg-[#E7FF86] px-6 text-center rounded-[20px] text-[14px] absolute transform -translate-y-[60px] translate-x-[-120px]">
-                            30% OFF
-                        </p>
-                        <h4 class="font-bold text-[32px] w-[172px] h-[72px] text-[#1F1F1F] absolute transform translate-x-[-80px] -translate-y-[5px]">
-                            Novo drop supreme
-                        </h4>
-                        <img src="./img-colecaoDestaque/star-wars-storm-trooper-supreme-shirts-supreme-t-shirt-snoopy-clothing-apparel-t-shirt-text-transparent-png-616696 1.svg" alt="camiseta preta" class="w-[200px] h-[200px] transform translate-x-[100px] translate-y-[25px] absolute">
-                        <button class="bg-white px-16 py-2 rounded-[8px] absolute transform -translate-x-[75px] translate-y-[95px] font-bold text-[#C92071]">Comprar</button>
-                    </div>
-                </div>
             </div>
-        </section>
+        </section>        
+        <script src="scriptHeader.js"></script>
     </main>
 </body>
 </html>
