@@ -24,7 +24,7 @@
             </div>
             <div class="flex items-center gap-5">
                 <a href="#" class="text-[#4F4F4F] text-[16px] font-medium hover:underline cursor-pointer">Cadastre-se</a>
-                <button class="bg-[#C92071] w-[114px] h-[40px] rounded-md text-white cursor-pointer hover:bg-pink-500 ">Entrar</button>
+                <button class="bg-[#C92071] w-[114px] h-[40px] rounded-[4px] font-bold text-[14px] text-white cursor-pointer hover:bg-pink-500 ">Entrar</button>
             </div>
             <div class="flex items-center">
                 <img src="./img-header/Group 53581.svg" alt="Carrinho de compras" class="w-[30px] h-[30px] cursor-pointer">
@@ -101,8 +101,9 @@
                         </button>
                     </template>
                 </div>
-            </div>
-            <script src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js" defer></script>
+            </div>            
+
+        <!-- Seção de Cards de Coleções em Destaque -->
         </section>
         <section class="fonte-[inter]">
             <div class="bg-white">
@@ -114,8 +115,17 @@
                 <div id="destaque-cards-container" class="flex gap-2 justify-center items-center mx-auto my-10 text-[inter]">
                     </div>
             </div>
-        </section>        
-        <script src="scriptHeader.js"></script>
+        </section>
+        <section>
+            <div class="flex justify-center items-center mt-20 mb-10">
+                <h3 class="justify-center items-center text-[inter] text-[24px] w-[283px] h-[38px] font-bold text-[#474747]">Coleções em destaque</h3>
+            </div>
+            <div id="cards-colecao-destaque" class="flex justify-center items-center gap-10 mb-10">
+                
+            </div>
+        </section>         
     </main>
+    <script src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js" defer></script>       
+    <script src="scriptHeader.js"></script>
 </body>
 </html>
