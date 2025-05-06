@@ -26,3 +26,4 @@ const colecaoDestaque = [
     }
 ];
 
+const cardsColecao = document.querySelector(".cards-colecao-destaque");

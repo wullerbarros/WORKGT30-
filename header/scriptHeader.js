@@ -34,7 +34,7 @@ destaqueCardsData.forEach(cardData => {
     descontoP.textContent = cardData.desconto;
 
     const tituloH4 = document.createElement('h4');
-    tituloH4.classList.add('font-bold', 'text-[32px]', 'w-[172px]', 'h-[72px]', 'text-[#1F1F1F]', 'absolute', 'transform', '-translate-x-[80px]', '-translate-y-[5px]');
+    tituloH4.classList.add('font-bold', 'text-[32px]','leading-[38px]', 'w-[172px]', 'h-[72px]', 'text-[#1F1F1F]', 'absolute', 'transform', '-translate-x-[80px]', '-translate-y-[5px]');
     tituloH4.textContent = cardData.titulo;
 
     const imagemImg = document.createElement('img');
@@ -43,7 +43,7 @@ destaqueCardsData.forEach(cardData => {
     imagemImg.classList.add('w-[200px]', 'h-[200px]', 'transform', 'translate-x-[100px]', 'translate-y-[25px]', 'absolute');
 
     const botaoComprar = document.createElement('button');
-    botaoComprar.classList.add('bg-white', 'hover:bg-[#E7FF86]', 'cursor-pointer', 'px-16', 'py-2', 'rounded-[8px]', 'absolute', 'transform', '-translate-x-[75px]', 'translate-y-[95px]', 'font-bold', 'text-[#C92071]');
+    botaoComprar.classList.add('bg-white', 'hover:bg-[#E7FF86]', 'cursor-pointer', 'px-16', 'py-2', 'rounded-[8px]', 'absolute', 'transform', '-translate-x-[75px]', 'translate-y-[80px]', 'font-bold', 'text-[#C92071]');
     botaoComprar.textContent = cardData.textoBotao;
 
     // 2. Adicionar os elementos criados ao card
