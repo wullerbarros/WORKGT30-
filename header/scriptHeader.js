@@ -30,20 +30,20 @@ destaqueCardsData.forEach(cardData => {
     cardDiv.classList.add('bg-[#D8E3F2]', 'w-[405px]', 'h-[251px]', 'rounded-[8px]', 'flex', 'items-center', 'justify-center', 'relative');
 
     const descontoP = document.createElement('p');
-    descontoP.classList.add('bg-[#E7FF86]', 'px-6', 'text-center', 'rounded-[20px]', 'text-[14px]', 'absolute', 'transform', '-translate-y-[60px]', '-translate-x-[120px]');
+    descontoP.classList.add('bg-[#E7FF86]', 'h-[32px]', 'w-[96px]', 'text-center', 'flex', 'items-center', 'justify-center', 'rounded-[29px]', 'text-[14px]', 'mt-[34px]', 'mb-[185px]', 'mr-[279px]', 'ml-[30px]', 'font-bold', 'text-[#474747]');
     descontoP.textContent = cardData.desconto;
 
     const tituloH4 = document.createElement('h4');
-    tituloH4.classList.add('font-bold', 'text-[32px]','leading-[38px]', 'w-[172px]', 'h-[72px]', 'text-[#1F1F1F]', 'absolute', 'transform', '-translate-x-[80px]', '-translate-y-[5px]');
+    tituloH4.classList.add('font-bold', 'text-[32px]', 'text-[inter]', 'leading-[36px]', 'w-[172px]', 'h-[72px]', 'text-[#1F1F1F]', 'absolute', 'mt-[76px]', 'mb-[76px]', 'mr-[203px]', 'ml-[30px]');
     tituloH4.textContent = cardData.titulo;
 
     const imagemImg = document.createElement('img');
     imagemImg.src = cardData.imagemSrc;
     imagemImg.alt = cardData.altImagem;
-    imagemImg.classList.add('w-[200px]', 'h-[200px]', 'transform', 'translate-x-[100px]', 'translate-y-[25px]', 'absolute');
+    imagemImg.classList.add('w-[242px]', 'h-[251px]', 'transform', 'translate-x-[80px]', 'translate-y-[0px]', 'absolute');
 
     const botaoComprar = document.createElement('button');
-    botaoComprar.classList.add('bg-white', 'hover:bg-[#E7FF86]', 'cursor-pointer', 'px-16', 'py-2', 'rounded-[8px]', 'absolute', 'transform', '-translate-x-[75px]', 'translate-y-[80px]', 'font-bold', 'text-[#C92071]');
+    botaoComprar.classList.add('bg-white', 'hover:bg-[#E7FF86]', 'cursor-pointer', 'w-[153px]', 'h-[48px]', 'rounded-[8px]', 'absolute', 'mr-[222px]', 'ml-[30px]', 'mt-[168px]', 'mb-[35px]', 'font-bold', 'text-[#C92071]');
     botaoComprar.textContent = cardData.textoBotao;
 
     // 2. Adicionar os elementos criados ao card
