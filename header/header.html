@@ -13,7 +13,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Bungee+Tint&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Orbitron:wght@400..900&family=Pacifico&family=Playwrite+MX+Guides&family=Rowdies:wght@300;400;700&family=Winky+Sans:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
 </head>
 <body>
-    <header class="bg-white font-[inter]">
+    <header class="bg-white text-[inter]">
         <div class="flex justify-between items-center h-[80px] px-10">
             <img src="./img-header/logo.svg" alt="Logo Geração Tech">
             <div class="relative flex items-center">
@@ -39,9 +39,9 @@
             </ul>
         </nav>
     </header>
-    <main class="bg-[#F9F8FE]">
+    <main class="bg-[#F9F8FE] ">
         <!-- Seção de Carrossel -->
-        <section class="bg-gray-100 flex flex-col items-center justify-center font-[inter]">
+        <section class="bg-gray-100 flex flex-col items-center justify-center text-[inter]">
             <div x-data="{ activeSlide: 0, slides: [
                 { image: './img-header/White-Sneakers-PNG-Clipart 1.svg', title: 'Queima de estoque Nike', subtitle: 'Melhores ofertas personalizadas', description: 'Consequat culpa exercitation mollit nisi excepteur do do tempor laboris eiusmod irure consectetur.', buttonText: 'Ver Ofertas', buttonLink: '#', topImage: './img-header/Ornament 11.svg', fireImage: './img-header/foguinho.png' },
                 { image: './img-header/White-Sneakers-PNG-Clipart 1.svg', title: 'Queima de estoque Nike', subtitle: 'Melhores ofertas personalizadas', description: 'Consequat culpa exercitation mollit nisi excepteur do do tempor laboris eiusmod irure consectetur.', buttonText: 'Ver Ofertas', buttonLink: '#', topImage: './img-header/Ornament 11.svg', fireImage: './img-header/foguinho.png' },
@@ -104,22 +104,22 @@
             </div>            
         </section>
         <!-- Seção de Cards de Coleções em Destaque -->
-        <section class="fonte-[inter] bg-[#F9F8FE]">
-            <div class="bg-[#F9F8FE] flex flex-col items-center justify-center font-[inter]">
+        <section class="text-[inter] bg-[#F9F8FE]">
+            <div class=" flex flex-col items-center justify-center text-[inter]">
                 <div>
-                    <h3 class="text-[#474747] text-[24px] font-[inter] font-bold mx-10 my-10">
+                    <h3 class="text-[#474747] text-[24px] text-[inter] font-bold mx-10 my-10">
                         Coleções em destaque
                     </h3>
                 </div>
-                <div id="destaque-cards-container" class="flex gap-[12px] mt-[20px] pl-[50px] pr-[50px] justify-center items-center text-[inter]">
+                <div id="destaque-cards-container" class="flex gap-[12px] mt-[20px] justify-center items-center text-[inter]">
                     </div>
             </div>
         </section>
-        <section>
+        <section class="pb-20">
             <div class="flex justify-center items-center mt-20 mb-10">
                 <h3 class="justify-center items-center text-[inter] text-[24px] w-[283px] h-[38px] font-bold text-[#474747]">Coleções em destaque</h3>
             </div>
-            <div id="cards-colecao-destaque" class="flex justify-center items-center gap-10 mb-10">
+            <div id="cards-colecao-destaque" class="flex justify-center items-center gap-10">
                 
             </div>
         </section>         

@@ -29,22 +29,22 @@ const colecaoDestaque = [
 const cardsColecao = document.getElementById("cards-colecao-destaque");
 
 colecaoDestaque.forEach((item) => {
-    const colecaoDiv = document.createElement("div");
-    colecaoDiv.classList.add('bg-white', 'w-[104px]', 'h-[104px]', 'p-[20px]', 'gap-[10px]', 'rounded-[150px]', 'flex', 'flex-col', 'items-center', 'justify-center', 'gap-[10px]');
+    const colecaoDivImg = document.createElement("div");
+    colecaoDivImg.classList.add('bg-white', 'w-[104px]', 'h-[104px]', 'p-[20px]', 'gap-[10px]', 'rounded-[150px]', 'flex', 'items-center', 'justify-center', 'gap-[10px]');
 
     const imagem = document.createElement("img");
     imagem.src = item.imagemSrc;
     imagem.alt = item.altImagem;
-    imagem.classList.add('w-[64px]', 'h-[63.92px]' , 'relative', 'item-center', 'justify-center', 'mt-[20px]', '-mb-[20px]', 'hover:scale-110', 'transition-transform', 'duration-300', 'cursor-pointer');
+    imagem.classList.add('w-[64px]', 'h-[63.92px]' , 'hover:scale-110', 'transition-transform', 'duration-300', 'cursor-pointer');
 
     const titulo = document.createElement("p");
     titulo.classList.add('font-[inter]','font-bold', 'text-[14px]', 'text-[#474747]', 'leading-[22px]', 'mt-2', 'text-center', 'mt-[30px]', '-mb-[20px]', 'hover:text-[#C92071]', 'transition-colors', 'duration-300');
     titulo.textContent = item.titulo;
 
     // Adicionando os elementos criados ao card
-    colecaoDiv.appendChild(imagem);
-    colecaoDiv.appendChild(titulo);
+    colecaoDivImg.appendChild(imagem);
+    cardsColecao.appendChild(titulo)
 
     // Adicionando o card ao container
-    cardsColecao.appendChild(colecaoDiv);
+    cardsColecao.appendChild(colecaoDivImg);
 });
