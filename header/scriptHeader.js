@@ -33,9 +33,9 @@ destaqueCardsData.forEach(cardData => {
     descontoP.classList.add('bg-[#E7FF86]', 'h-[32px]', 'w-[96px]', 'text-center', 'flex', 'items-center', 'justify-center', 'rounded-[29px]', 'text-[14px]', 'mt-[34px]', 'mb-[185px]', 'mr-[279px]', 'ml-[30px]', 'font-bold', 'text-[#474747]');
     descontoP.textContent = cardData.desconto;
 
-    const tituloH4 = document.createElement('h4');
-    tituloH4.classList.add('font-bold', 'text-[32px]', 'text-[inter]', 'leading-[36px]', 'w-[172px]', 'h-[72px]', 'text-[#1F1F1F]', 'absolute', 'mt-[76px]', 'mb-[76px]', 'mr-[203px]', 'ml-[30px]');
-    tituloH4.textContent = cardData.titulo;
+    const tituloH2 = document.createElement('h2');
+    tituloH2.classList.add('font-bold', 'text-[32px]', 'text-[inter]', 'leading-[36px]', 'w-[172px]', 'h-[72px]', 'text-[#1F1F1F]', 'absolute', 'mt-[76px]', 'mb-[76px]', 'mr-[203px]', 'ml-[30px]');
+    tituloH2.textContent = cardData.titulo;
 
     const imagemImg = document.createElement('img');
     imagemImg.src = cardData.imagemSrc;
@@ -48,7 +48,7 @@ destaqueCardsData.forEach(cardData => {
 
     // 2. Adicionar os elementos criados ao card
     cardDiv.appendChild(descontoP);
-    cardDiv.appendChild(tituloH4);
+    cardDiv.appendChild(tituloH2);
     cardDiv.appendChild(imagemImg);
     cardDiv.appendChild(botaoComprar);
 

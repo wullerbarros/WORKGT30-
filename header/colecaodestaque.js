@@ -29,22 +29,33 @@ const colecaoDestaque = [
 const cardsColecao = document.getElementById("cards-colecao-destaque");
 
 colecaoDestaque.forEach((item) => {
-    const colecaoDivImg = document.createElement("div");
-    colecaoDivImg.classList.add('bg-white', 'w-[104px]', 'h-[104px]', 'p-[20px]', 'gap-[10px]', 'rounded-[150px]', 'flex', 'items-center', 'justify-center', 'gap-[10px]');
+    // Contêiner principal do card
+    const card = document.createElement("div");
+    card.classList.add('flex', 'flex-col', 'items-center', 'gap-[10px]');
+
+    // Div para a imagem
+    const imagemDiv = document.createElement("div");
+    imagemDiv.classList.add('bg-white', 'w-[104px]', 'h-[104px]', 'p-[20px]', 'rounded-[150px]', 'flex', 'items-center', 'justify-center');
 
     const imagem = document.createElement("img");
     imagem.src = item.imagemSrc;
     imagem.alt = item.altImagem;
-    imagem.classList.add('w-[64px]', 'h-[63.92px]' , 'hover:scale-110', 'transition-transform', 'duration-300', 'cursor-pointer');
+    imagem.classList.add('w-[64px]', 'h-[63.92px]', 'hover:scale-110', 'transition-transform', 'duration-300', 'cursor-pointer');
 
-    // const titulo = document.createElement("p");
-    // titulo.classList.add('font-[inter]','font-bold', 'text-[14px]', 'text-[#474747]', 'mt-[160px]', 'mb-[20px]','hover:text-[#C92071]', 'transition-colors', 'duration-300');
-    // titulo.textContent = item.titulo;
+    imagemDiv.appendChild(imagem);
 
-    // Adicionando os elementos criados ao card
-    colecaoDivImg.appendChild(imagem);
-    // cardsColecao.appendChild(titulo)
+    // Div para o título
+    const tituloDiv = document.createElement("div");
+    const titulo = document.createElement("h2");
+    titulo.classList.add('font-[inter]', 'font-bold', 'text-[14px]', 'text-[#474747]', 'hover:text-[#C92071]', 'transition-colors', 'duration-300');
+    titulo.textContent = item.titulo;
 
-    // Adicionando o card ao container
-    cardsColecao.appendChild(colecaoDivImg);
+    tituloDiv.appendChild(titulo);
+
+    // Adicionando as divs ao contêiner principal
+    card.appendChild(imagemDiv);
+    card.appendChild(tituloDiv);
+
+    // Adicionando o card ao container principal
+    cardsColecao.appendChild(card);
 });
