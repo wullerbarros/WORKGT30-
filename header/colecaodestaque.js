@@ -37,13 +37,13 @@ colecaoDestaque.forEach((item) => {
     imagem.alt = item.altImagem;
     imagem.classList.add('w-[64px]', 'h-[63.92px]' , 'hover:scale-110', 'transition-transform', 'duration-300', 'cursor-pointer');
 
-    const titulo = document.createElement("p");
-    titulo.classList.add('font-[inter]','font-bold', 'text-[14px]', 'text-[#474747]', 'leading-[22px]', 'mt-2', 'text-center', 'mt-[30px]', '-mb-[20px]', 'hover:text-[#C92071]', 'transition-colors', 'duration-300');
-    titulo.textContent = item.titulo;
+    // const titulo = document.createElement("p");
+    // titulo.classList.add('font-[inter]','font-bold', 'text-[14px]', 'text-[#474747]', 'mt-[160px]', 'mb-[20px]','hover:text-[#C92071]', 'transition-colors', 'duration-300');
+    // titulo.textContent = item.titulo;
 
     // Adicionando os elementos criados ao card
     colecaoDivImg.appendChild(imagem);
-    cardsColecao.appendChild(titulo)
+    // cardsColecao.appendChild(titulo)
 
     // Adicionando o card ao container
     cardsColecao.appendChild(colecaoDivImg);
