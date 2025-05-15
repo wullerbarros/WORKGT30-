@@ -28,7 +28,7 @@ const colecaoDestaque = [
 
 const cardsColecao = document.getElementById("cards-colecao-destaque");
 
-colecaoDestaque.forEach((item) => {
+colecaoDestaque.forEach((item) => { 
     // Contêiner principal do card
     const card = document.createElement("div");
     card.classList.add('flex', 'flex-col', 'items-center', 'gap-[10px]');
@@ -42,7 +42,7 @@ colecaoDestaque.forEach((item) => {
     imagem.alt = item.altImagem;
     imagem.classList.add('w-[64px]', 'h-[63.92px]', 'hover:scale-110', 'transition-transform', 'duration-300', 'cursor-pointer');
 
-    imagemDiv.appendChild(imagem);
+    imagemDiv.appendChild(imagem); 
 
     // Div para o título
     const tituloDiv = document.createElement("div");
@@ -50,7 +50,7 @@ colecaoDestaque.forEach((item) => {
     titulo.classList.add('font-[inter]', 'font-bold', 'text-[14px]', 'text-[#474747]', 'hover:text-[#C92071]', 'transition-colors', 'duration-300');
     titulo.textContent = item.titulo;
 
-    tituloDiv.appendChild(titulo);
+    tituloDiv.appendChild(titulo); 
 
     // Adicionando as divs ao contêiner principal
     card.appendChild(imagemDiv);

@@ -53,5 +53,5 @@ destaqueCardsData.forEach(cardData => {
     cardDiv.appendChild(botaoComprar);
 
     // 3. Adicionar o card ao container
-    cardsContainer.appendChild(cardDiv); 
+    cardsContainer.appendChild(cardDiv);
 });
